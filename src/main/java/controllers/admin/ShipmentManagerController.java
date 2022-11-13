@@ -11,9 +11,7 @@ import models.Shipment;
 import views.popup.ShipmentPopupView;
 
 /**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class ShipmentManagerController extends ManagerController {
 

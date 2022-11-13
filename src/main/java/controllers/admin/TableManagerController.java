@@ -12,9 +12,7 @@ import models.admin.TableManagerView;
 import views.popup.TablePopupView;
 
 /**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class TableManagerController extends ManagerController {
 

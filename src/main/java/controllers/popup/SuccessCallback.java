@@ -1,9 +1,7 @@
 package controllers.popup;
 
 /**
- * createAt Dec 31, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public interface SuccessCallback {
 

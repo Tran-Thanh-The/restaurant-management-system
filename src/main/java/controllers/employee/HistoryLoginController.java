@@ -9,9 +9,7 @@ import views.employee.HistoryLoginView;
 import views.employee.SessionLoginView;
 
 /**
- * createAt Jan 12, 2021
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class HistoryLoginController {
 

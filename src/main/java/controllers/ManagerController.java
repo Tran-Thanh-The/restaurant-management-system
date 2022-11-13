@@ -8,9 +8,7 @@ import java.awt.event.KeyEvent;
 import models.admin.ManagerPaneView;
 
 /**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 //Form chung cho các panel kế thừa
 public abstract class ManagerController {

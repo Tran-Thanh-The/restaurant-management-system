@@ -7,11 +7,8 @@ import javax.swing.JFrame;
 import models.Table;
 import utils.TableStatus;
 import views.popup.TablePopupView;
-
 /**
- * createAt Dec 17, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class TablePopupController {
 

@@ -13,9 +13,7 @@ import models.admin.OrderManagerView;
 import models.admin.EmployeeManagerView;
 
 /**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class LoginController {
 

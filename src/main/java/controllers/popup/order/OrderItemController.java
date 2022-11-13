@@ -6,9 +6,7 @@ import models.OrderItem;
 import views.popup.order.OrderItemPane;
 
 /**
- * createAt Dec 21, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class OrderItemController {
 

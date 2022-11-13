@@ -7,10 +7,7 @@ import javax.swing.JPanel;
 import models.admin.MenuItem;
 
 /**
- * createAt Dec 18, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
- * Quản lý menu sidebar
+ * Nguyễn Trọng Dũng
  */
 public class SideBarController {
 

@@ -16,8 +16,7 @@ import views.employee.HistoryLoginView;
 import views.employee.InformationView;
 
 /**
- *
- * @author Admin
+ * Nguyễn Trọng Dũng
  */
 public class InformationController {
 

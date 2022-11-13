@@ -12,9 +12,7 @@ import utils.IntervalIncrease;
 import models.admin.StatisticalView;
 
 /**
- * createAt Dec 27, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class StatisticalController {
 

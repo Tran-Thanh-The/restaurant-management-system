@@ -11,8 +11,7 @@ import models.Session;
 import views.employee.SessionLoginView;
 
 /**
- *
- * @author Administrator
+ * Nguyễn Trọng Dũng
  */
 public class SessionLoginController {
 

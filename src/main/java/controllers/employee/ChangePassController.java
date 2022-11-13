@@ -14,8 +14,7 @@ import models.Employee;
 import views.employee.ChangePassView;
 
 /**
- *
- * @author Admin
+ * Nguyễn Trọng Dũng
  */
 public class ChangePassController {
 

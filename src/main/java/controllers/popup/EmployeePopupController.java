@@ -7,9 +7,7 @@ import utils.EmployeePermission;
 import views.popup.EmployeePopupView;
 
 /**
- * createAt Dec 17, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class EmployeePopupController {
 
