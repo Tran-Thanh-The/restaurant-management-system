@@ -4,9 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- *
- * @author MSI
+ * @author Nguyen Trung Kien
  */
+
 public class OrderItem extends Model {
 
     private int idOrder, idFoodItem, idTopping, quantity, foodPrice, toppingPrice;

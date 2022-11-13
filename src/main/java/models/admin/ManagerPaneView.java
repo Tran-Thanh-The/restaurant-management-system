@@ -17,9 +17,9 @@ import utils.ErrorPopup;
 import utils.IconManager;
 
 /**
- *
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Nguyen Trung Kien
  */
+
 public abstract class ManagerPaneView<T extends Model> extends JPanel {
 
     DefaultTableModel tableModel = new DefaultTableModel();

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models.admin;
 
 import com.toedter.calendar.JDateChooser;
@@ -16,9 +11,7 @@ import javax.swing.table.DefaultTableModel;
 import utils.ErrorPopup;
 
 /**
- * createAt Jan 11, 2021
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author Nguyen Trung Kien
  */
 public class StatisticalEmployeeView extends javax.swing.JPanel {
 

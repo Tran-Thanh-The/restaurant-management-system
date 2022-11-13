@@ -7,8 +7,7 @@ import utils.IconManager;
 import utils.SidebarColor;
 
 /**
- *
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Nguyen Trung Kien
  */
 public class MenuItem extends javax.swing.JPanel {
 

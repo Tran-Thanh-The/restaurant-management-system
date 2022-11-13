@@ -6,9 +6,9 @@ import java.sql.SQLException;
 import utils.EmployeePermission;
 
 /**
- * @createAt Nov 24, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Nguyen Trung Kien
  */
+
 public class Employee extends Model {
 
     protected int id;

@@ -7,9 +7,10 @@ import utils.OrderStatus;
 import utils.OrderType;
 
 /**
- *
- * @author MSI
+ * @author Nguyen Trung Kien
  */
+
+
 public class Order extends Model {
 
     private int id, idEmployee, idTable;

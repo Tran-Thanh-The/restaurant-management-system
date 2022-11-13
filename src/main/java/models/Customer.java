@@ -5,9 +5,9 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 
 /**
- * @createAt Nov 24, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Nguyen Trung Kien
  */
+
 public class Customer extends Model {
 
     protected int id;
