@@ -4,10 +4,10 @@ import javax.swing.DefaultComboBoxModel;
 import models.Customer;
 
 /**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author Nguyen Trung Kien
  */
+
+
 public class CustomerManagerView extends ManagerPaneView<Customer> {
 
     String[] list = {"ID", "phoneNumber", "name", "address"};

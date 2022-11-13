@@ -5,11 +5,11 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import utils.ShipmentStatus;
 
+
 /**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author Nguyen Trung Kien
  */
+
 public class Shipment extends Model {
 
     private int idOrder, idCustomer;

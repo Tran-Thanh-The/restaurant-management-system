@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models.admin;
 
 import com.toedter.calendar.JDateChooser;
@@ -19,8 +14,7 @@ import models.Statistical;
 import utils.ErrorPopup;
 
 /**
- *
- * @author Admin
+ * @author Nguyen Trung Kien
  */
 public class StatisticalFoodView extends javax.swing.JPanel {
 

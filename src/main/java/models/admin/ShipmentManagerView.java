@@ -4,9 +4,7 @@ import javax.swing.DefaultComboBoxModel;
 import models.Shipment;
 
 /**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author Nguyen Trung Kien
  */
 public class ShipmentManagerView extends ManagerPaneView<Shipment> {
 

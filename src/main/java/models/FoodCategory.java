@@ -5,9 +5,10 @@ import java.sql.SQLException;
 import utils.StringToSlug;
 
 /**
- * @createAt Dec 1, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Nguyen Trung Kien
  */
+
+
 public class FoodCategory extends Model {
 
     protected int id;
