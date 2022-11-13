@@ -36,6 +36,7 @@ public class AboutView extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1008, 680));
         setLayout(new java.awt.BorderLayout());
@@ -58,25 +59,29 @@ public class AboutView extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(153, 0, 153));
-        jLabel1.setText("Phần mềm quản lý cửa hàng trà sữa");
+        jLabel1.setText("Phần mềm quản lý nhà hàng");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel2.setText("Đề tài môn phát triển phần mềm ứng dụng");
+        jLabel2.setText("Bài tập lớn môn Lập trình hướng đối tượng");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Nhóm 15:");
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setText("Nhóm 13:");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel4.setText("Trần Đức Cường - CT030208");
+        jLabel4.setText("Trần Thanh Thế - B20DCCN664");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Đỗ Tuấn Anh - CT030203");
+        jLabel5.setText("Ninh Văn Cường - B20DDCAT023");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel6.setText("Nguyễn Lam Sơn - CT030246");
+        jLabel6.setText("Nguyễn Trọng Dũng - B20DCCN139");
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel8.setText("Nguyễn Trung Kiên - B20DCCN021");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -89,8 +94,9 @@ public class AboutView extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(jLabel1)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel5))
-                .addContainerGap(477, Short.MAX_VALUE))
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel8))
+                .addContainerGap(558, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,15 +105,17 @@ public class AboutView extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
                 .addGap(27, 27, 27)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
-                .addContainerGap(433, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addContainerGap(390, Short.MAX_VALUE))
         );
 
         add(jPanel2, java.awt.BorderLayout.CENTER);
@@ -120,6 +128,7 @@ public class AboutView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
