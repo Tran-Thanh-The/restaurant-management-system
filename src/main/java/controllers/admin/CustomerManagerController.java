@@ -12,7 +12,7 @@ import models.Customer;
 import views.popup.CustomerPopupView;
 
 /**
- * @authorNguyễn Trọng Dũng
+ * Nguyễn Trọng Dũng
  */
 public class CustomerManagerController extends ManagerController {
 

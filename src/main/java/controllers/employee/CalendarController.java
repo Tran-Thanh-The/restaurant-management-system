@@ -22,8 +22,7 @@ import views.employee.CalendarView;
 import views.employee.DayView;
 
 /**
- *
- * @author Admin
+ * Nguyễn Trọng Dũng
  */
 public class CalendarController {
 

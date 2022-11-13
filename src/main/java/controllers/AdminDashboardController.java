@@ -37,9 +37,7 @@ import models.admin.TableManagerView;
 import views.employee.InformationView;
 
 /**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class AdminDashboardController {
 

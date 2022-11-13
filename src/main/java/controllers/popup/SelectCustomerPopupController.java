@@ -7,9 +7,7 @@ import models.Customer;
 import views.popup.SelectCustomerPopupView;
 
 /**
- * createAt Dec 31, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.cSom>
+ * Nguyễn Trọng Dũng
  */
 public class SelectCustomerPopupController {
 

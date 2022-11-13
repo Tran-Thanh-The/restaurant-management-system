@@ -14,9 +14,7 @@ import utils.Debouncer;
 import models.admin.StatisticalEmployeeView;
 
 /**
- * createAt Jan 11, 2021
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class StatisticalEmployeeController {
 

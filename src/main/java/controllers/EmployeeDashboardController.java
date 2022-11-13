@@ -26,8 +26,7 @@ import models.admin.ShipmentManagerView;
 import views.employee.InformationView;
 
 /**
- *
- * @author Trần Thanh Thế
+ * Nguyễn Trọng Dũng
  */
 public class EmployeeDashboardController {
 

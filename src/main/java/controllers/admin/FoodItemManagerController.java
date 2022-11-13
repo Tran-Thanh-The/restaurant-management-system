@@ -12,10 +12,7 @@ import models.admin.FoodItemManagerView;
 import views.popup.FoodItemPopupView;
 
 /**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
- * Manager Controller mẫu
+ * Nguyễn Trọng Dũng
  */
 public class FoodItemManagerController extends ManagerController {
 

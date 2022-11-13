@@ -12,9 +12,7 @@ import utils.EmployeePermission;
 import views.popup.EmployeePopupView;
 
 /**
- * createAt Dec 15, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class EmployeeManagerController extends ManagerController {
 

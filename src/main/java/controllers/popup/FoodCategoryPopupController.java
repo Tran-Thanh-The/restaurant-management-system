@@ -8,9 +8,7 @@ import models.FoodCategory;
 import views.popup.FoodCategoryPopupView;
 
 /**
- * createAt Dec 17, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class FoodCategoryPopupController {
 

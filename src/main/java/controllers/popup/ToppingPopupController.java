@@ -8,9 +8,7 @@ import models.OrderItem;
 import views.popup.ToppingPopupView;
 
 /**
- * createAt Dec 21, 2020
- *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * Nguyễn Trọng Dũng
  */
 public class ToppingPopupController {
 

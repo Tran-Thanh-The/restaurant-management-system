@@ -16,8 +16,7 @@ import models.Statistical;
 import models.admin.StatisticalFoodView;
 
 /**
- *
- * @author Admin
+ * Nguyễn Trọng Dũng
  */
 public class StatisticalFoodController {
 
