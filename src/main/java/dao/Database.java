@@ -6,8 +6,7 @@ import java.sql.SQLException;
 import utils.LoadConfig;
 
 /**
- * @createAt Nov 11, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Tran Thanh The
  */
 public class Database {
 

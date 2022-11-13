@@ -2,7 +2,7 @@ package utils;
 
 /**
  *
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Tran Thanh The
  */
 public enum TableStatus {
     FREE("free", "Trống"),
