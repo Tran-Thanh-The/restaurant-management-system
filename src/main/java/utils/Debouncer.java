@@ -7,9 +7,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * createAt Jan 2, 2021
  *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author Tran Thanh The
  */
 public class Debouncer {
 

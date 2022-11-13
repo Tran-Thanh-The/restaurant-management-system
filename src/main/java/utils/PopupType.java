@@ -1,9 +1,8 @@
 package utils;
 
 /**
- * createAt Dec 18, 2020
  *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author Tran Thanh The
  */
 public enum PopupType {
     ADD,

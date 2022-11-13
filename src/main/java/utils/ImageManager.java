@@ -13,8 +13,7 @@ import javax.swing.ImageIcon;
 import org.imgscalr.Scalr;
 
 /**
- * @createAt Nov 15, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Tran Thanh The
  */
 public class ImageManager {
 

@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import models.Table;
 
 /**
- * @createAt Nov 28, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Tran Thanh The
  */
 public class TableDao extends Dao<Table> {
 

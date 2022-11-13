@@ -9,7 +9,7 @@ import models.Employee;
 
 /**
  *
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Tran Thanh The
  */
 public class EmployeeDao extends Dao<Employee> {
 

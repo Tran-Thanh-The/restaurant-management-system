@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import models.Customer;
 
 /**
- * @createAt Nov 25, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author Tran Thanh The
  */
 public class CustomerDao extends Dao<Customer> {
 
