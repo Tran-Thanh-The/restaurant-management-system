@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Admin
+ * @author ninh van cuong 
  */
 public class InformationView extends javax.swing.JPanel {
 

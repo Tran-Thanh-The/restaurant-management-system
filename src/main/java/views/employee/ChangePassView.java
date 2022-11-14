@@ -12,7 +12,7 @@ import utils.ErrorPopup;
 
 /**
  *
- * @author Admin
+ * @author ninh van cuong 
  */
 public class ChangePassView extends javax.swing.JFrame {
 

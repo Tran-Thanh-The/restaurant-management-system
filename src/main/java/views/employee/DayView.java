@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author Admin
+ * @author ninh van cuong 
  */
 public class DayView extends javax.swing.JPanel {
 
