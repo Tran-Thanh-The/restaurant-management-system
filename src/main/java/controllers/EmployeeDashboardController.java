@@ -5,7 +5,6 @@
  */
 package controllers;
 
-import controllers.employee.InformationController;
 import controllers.admin.CustomerManagerController;
 import controllers.admin.OrderManagerController;
 import controllers.admin.ShipmentManagerController;
@@ -23,7 +22,6 @@ import models.admin.ManagerPaneView;
 import models.admin.MenuItem;
 import models.admin.OrderManagerView;
 import models.admin.ShipmentManagerView;
-import views.employee.InformationView;
 
 /**
  * Nguyễn Trọng Dũng
@@ -34,16 +32,14 @@ public class EmployeeDashboardController {
     ManagerController orderManagerController = new OrderManagerController(),
             shipmentManagerController = new ShipmentManagerController(),
             customerManagerController = new CustomerManagerController();
-    InformationController informationController = new InformationController();
     ManagerPaneView orderManagerView = new OrderManagerView(),
             shipmentManagerView = new ShipmentManagerView(),
             customerManagerView = new CustomerManagerView();
     AboutView aboutView = new AboutView();
-    InformationView informationView = new InformationView();
 
     SideBarController sideBarController = new SideBarController();
     JPanel[] cards = { orderManagerView, customerManagerView,
-        shipmentManagerView, aboutView, informationView};
+        shipmentManagerView, aboutView};
 
     public EmployeeDashboardController(EmployeeDashboardView view) {
         this.view = view;
@@ -112,10 +108,6 @@ public class EmployeeDashboardController {
                 break;
             case "TT":
                 view.setPanel(aboutView);
-                break;
-            case "TTCN": // Thống tin cá nhân
-                view.setPanel(informationView);
-                informationController.setView(informationView);
                 break;
             default:
                 view.setPanel(orderManagerView);
