@@ -42,30 +42,22 @@ public class LoginController {
         
         try {
             Employee employee = employeeDao.findByUsername(username);
-            System.out.println("-2");
             if (employee == null) {
                 view.showError("Không tồn tại tài khoản!");
                 return;
             }
-            
-            System.out.println("-1");
             if (!employee.checkPassword(password)) {
                 view.showError("Mật khẩu sai");
                 return;
             }
             
-            System.out.println("-1");
             SessionManager.create(employee);//Khởi tạo session
 
             switch (employee.getPermission()) {
                 case MANAGER:
                     //Admin controller
-                    
-                    System.out.println("0");
                     AdminDashboardController controller = new AdminDashboardController(new AdminDashboardView());
-                    System.out.println("1");
                     controller.getView().setPanel(new EmployeeManagerView());
-                    System.out.println("2");
                     view.dispose();// Tắt form đăng nhập
                     break;
                 case STAFF:
