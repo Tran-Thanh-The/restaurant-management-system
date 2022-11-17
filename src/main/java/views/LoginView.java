@@ -9,7 +9,7 @@ import utils.ErrorPopup;
 
 /**
  * @createAt Nov 7, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author ninh van cuong 
  */
 public class LoginView extends javax.swing.JFrame {
 

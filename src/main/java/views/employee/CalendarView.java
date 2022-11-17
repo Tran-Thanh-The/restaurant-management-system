@@ -15,7 +15,7 @@ import utils.ErrorPopup;
 
 /**
  *
- * @author Admin
+ * @author ninh van cuong 
  */
 public class CalendarView extends javax.swing.JPanel {
 

@@ -10,7 +10,7 @@ import utils.ImageManager;
 /**
  * createAt Dec 13, 2020
  *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author ninh van cuong 
  */
 public class OrderItemPane extends javax.swing.JPanel {
 

@@ -9,7 +9,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 /**
  * createAt Dec 20, 2020
  *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author ninh van cuong 
  */
 public class ChooseImageView extends JFileChooser {
 

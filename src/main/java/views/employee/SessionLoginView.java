@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 /**
  * createAt Jan 12, 2021
  *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author ninh van cuong 
  */
 public class SessionLoginView extends javax.swing.JPanel {
 

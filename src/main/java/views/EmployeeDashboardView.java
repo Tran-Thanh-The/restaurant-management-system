@@ -15,7 +15,7 @@ import models.admin.MenuItem;
 
 /**
  *
- * @author Admin
+ * @author ninh van cuong 
  */
 public class EmployeeDashboardView extends javax.swing.JFrame {
 

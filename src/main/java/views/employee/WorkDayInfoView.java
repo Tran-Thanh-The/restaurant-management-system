@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author Admin
+ * @author ninh van cuong 
  */
 public class WorkDayInfoView extends javax.swing.JFrame {
 

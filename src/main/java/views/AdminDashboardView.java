@@ -10,7 +10,7 @@ import models.admin.MenuItem;
 
 /**
  * @createAt Nov 15, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author ninh van cuong 
  */
 public class AdminDashboardView extends javax.swing.JFrame {
 
