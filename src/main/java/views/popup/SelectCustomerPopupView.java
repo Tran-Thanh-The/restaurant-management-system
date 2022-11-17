@@ -18,7 +18,7 @@ import views.CustomerRenderJList;
 /**
  * createAt Dec 31, 2020
  *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author ninh van cuong 
  */
 public class SelectCustomerPopupView extends javax.swing.JFrame {
 

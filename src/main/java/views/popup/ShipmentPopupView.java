@@ -16,7 +16,7 @@ import utils.ErrorPopup;
 /**
  * createAt Dec 27, 2020
  *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author ninh van cuong 
  */
 public class ShipmentPopupView extends javax.swing.JFrame {
 

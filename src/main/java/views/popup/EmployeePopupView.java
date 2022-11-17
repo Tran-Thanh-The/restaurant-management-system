@@ -10,7 +10,7 @@ import utils.ErrorPopup;
 
 /**
  * @createAt Nov 16, 2020
- * @author Tran Duc Cuong<clonebmn2itt@gmail.com>
+ * @author ninh van cuong 
  */
 public class EmployeePopupView extends javax.swing.JFrame implements PopupView {
 

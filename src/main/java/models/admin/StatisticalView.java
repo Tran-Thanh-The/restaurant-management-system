@@ -93,6 +93,7 @@ public class StatisticalView extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         lbTotalCustomer = new javax.swing.JLabel();
         pnlContent = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -189,7 +190,7 @@ public class StatisticalView extends javax.swing.JPanel {
         jPanel4.setPreferredSize(new java.awt.Dimension(245, 100));
         jPanel4.setLayout(new java.awt.BorderLayout());
 
-        jPanel5.setBackground(new java.awt.Color(221, 75, 57));
+        jPanel5.setBackground(new java.awt.Color(119, 65, 57));
         jPanel5.setMaximumSize(new java.awt.Dimension(100, 100));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/money_50px.png"))); // NOI18N
@@ -359,12 +360,17 @@ public class StatisticalView extends javax.swing.JPanel {
 
         pnlContent.setPreferredSize(new java.awt.Dimension(1008, 530));
         pnlContent.setLayout(new java.awt.CardLayout());
+
+        jButton1.setText("jButton1");
+        pnlContent.add(jButton1, "card2");
+
         add(pnlContent, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.toedter.calendar.JDateChooser dateChooserEnd;
     private com.toedter.calendar.JDateChooser dateChooserStart;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

@@ -17,7 +17,7 @@ import utils.ErrorPopup;
 /**
  * createAt Dec 20, 2020
  *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author ninh van cuong 
  */
 public class AddOrderPopupView extends javax.swing.JFrame implements PopupView {
 
