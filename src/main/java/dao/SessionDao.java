@@ -57,9 +57,6 @@ public class SessionDao extends Dao<Session> {
 
     @Override
     public void save(Session t) throws SQLException {
-        if (t == null) {
-            throw new SQLException("Shipment rỗng");
-        }
         String query = "INSERT INTO `session` (`idEmployee`, `startTime`, `endTime` , `message`) VALUES (?, ?, ?, ?)";
 
         PreparedStatement stmt = conn.prepareStatement(query);
@@ -72,9 +69,6 @@ public class SessionDao extends Dao<Session> {
 
     @Override
     public void update(Session t) throws SQLException {
-        if (t == null) {
-            throw new SQLException("Shipment rỗng");
-        }
         String query = "UPDATE `session` SET `startTime` = ?, `endTime` = ?, `message` = ? WHERE `session`.`id` = ?";
 
         PreparedStatement stmt = conn.prepareStatement(query);

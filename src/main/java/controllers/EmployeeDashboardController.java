@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controllers;
 
 import controllers.admin.CustomerManagerController;
 import controllers.admin.OrderManagerController;
-// import controllers.admin.ShipmentManagerController;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -21,7 +15,6 @@ import models.admin.CustomerManagerView;
 import models.admin.ManagerPaneView;
 import models.admin.MenuItem;
 import models.admin.OrderManagerView;
-// import models.admin.ShipmentManagerView;
 
 /**
  * Nguyễn Trọng Dũng
@@ -30,16 +23,13 @@ public class EmployeeDashboardController {
 
     private EmployeeDashboardView view;
     ManagerController orderManagerController = new OrderManagerController(),
-            // shipmentManagerController = new ShipmentManagerController(),
             customerManagerController = new CustomerManagerController();
     ManagerPaneView orderManagerView = new OrderManagerView(),
-            // shipmentManagerView = new ShipmentManagerView(),
             customerManagerView = new CustomerManagerView();
     AboutView aboutView = new AboutView();
 
     SideBarController sideBarController = new SideBarController();
-    JPanel[] cards = { orderManagerView, customerManagerView,
-        shipmentManagerView, aboutView};
+    JPanel[] cards = { orderManagerView, customerManagerView, aboutView};
 
     public EmployeeDashboardController(EmployeeDashboardView view) {
         this.view = view;
@@ -100,11 +90,6 @@ public class EmployeeDashboardController {
                 view.setPanel(customerManagerView);
                 customerManagerController.setView(customerManagerView);
                 customerManagerController.updateData();
-                break;
-            // case "QLGH"://Quản lý giao hàng
-            //     view.setPanel(shipmentManagerView);
-            //     shipmentManagerController.setView(shipmentManagerView);
-            //     shipmentManagerController.updateData();
                 break;
             case "TT":
                 view.setPanel(aboutView);

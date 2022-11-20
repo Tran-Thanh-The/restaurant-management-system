@@ -53,7 +53,6 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
         jPanel4 = new javax.swing.JPanel();
         btnOK = new javax.swing.JButton();
         btnCancelOrder = new javax.swing.JButton();
-        btnShipManager = new javax.swing.JButton();
         btnPaid = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
         btnPrintOrder = new javax.swing.JButton();
@@ -90,7 +89,6 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
         jPanel13 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1555, 640));
 
         pnlTop.setPreferredSize(new java.awt.Dimension(1500, 40));
         pnlTop.setLayout(new java.awt.GridBagLayout());
@@ -225,15 +223,6 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         jPanel4.add(btnCancelOrder, gridBagConstraints);
-
-        btnShipManager.setText("Quản lý ship");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel4.add(btnShipManager, gridBagConstraints);
 
         btnPaid.setText("Thanh Toán");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -605,10 +594,6 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
         return btnPaid;
     }
 
-    public JButton getBtnShipManager() {
-        return btnShipManager;
-    }
-
     public JComboBox<Table> getCboTable() {
         return cboTable;
     }
@@ -676,7 +661,6 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
     private javax.swing.JButton btnOK;
     private javax.swing.JButton btnPaid;
     private javax.swing.JButton btnPrintOrder;
-    private javax.swing.JButton btnShipManager;
     private javax.swing.JComboBox<Table> cboTable;
     private javax.swing.JComboBox<String> cboType;
     private javax.swing.JLabel jLabel10;

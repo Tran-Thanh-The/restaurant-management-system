@@ -5,7 +5,6 @@ import controllers.admin.EmployeeManagerController;
 import controllers.admin.FoodCategoryManagerController;
 import controllers.admin.FoodItemManagerController;
 import controllers.admin.OrderManagerController;
-// import controllers.admin.ShipmentManagerController;
 import controllers.admin.StatisticalController;
 import controllers.admin.StatisticalEmployeeController;
 import controllers.admin.StatisticalIncomeController;
@@ -28,7 +27,6 @@ import models.admin.FoodItemManagerView;
 import models.admin.ManagerPaneView;
 import models.admin.MenuItem;
 import models.admin.OrderManagerView;
-// import models.admin.ShipmentManagerView;
 import models.admin.StatisticalEmployeeView;
 import models.admin.StatisticalIncomeView;
 import models.admin.StatisticalView;
@@ -45,7 +43,6 @@ public class AdminDashboardController {
             foodCategoryManagerController = new FoodCategoryManagerController(),
             foodItemManagerController = new FoodItemManagerController(),
             orderManagerController = new OrderManagerController(),
-            // shipmentManagerController = new ShipmentManagerController(),
             customerManagerController = new CustomerManagerController();
     StatisticalController statisticalController = new StatisticalController();
     StatisticalIncomeController statisticalIncomeController = new StatisticalIncomeController();
@@ -56,7 +53,6 @@ public class AdminDashboardController {
             foodCategoryManagerView = new FoodCategoryManagerView(),
             foodItemManagerView = new FoodItemManagerView(),
             orderManagerView = new OrderManagerView(),
-            // shipmentManagerView = new ShipmentManagerView(),
             customerManagerView = new CustomerManagerView();
     StatisticalView statisticalView = new StatisticalView();
     StatisticalIncomeView statisticalIncomeView = new StatisticalIncomeView();
@@ -160,11 +156,6 @@ public class AdminDashboardController {
                 foodItemManagerController.setView(foodItemManagerView);
                 foodItemManagerController.updateData();
                 break;
-            // case "QLGH"://Quản lý giao hàng
-            //     view.setPanel(shipmentManagerView);
-            //     shipmentManagerController.setView(shipmentManagerView);
-            //     shipmentManagerController.updateData();
-            //     break;
             case "QLHH":
             case "QLDH":
             case "TL":
