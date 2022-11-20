@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author MSI
+ * @author Tran Thanh The
  */
 public class ErrorPopup {
 

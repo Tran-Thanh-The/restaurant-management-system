@@ -42,8 +42,8 @@ public class SessionManager {
         if (session == null) {
             throw new SQLException("Ban chua dang nhap!");
         }
-        session.setMessage("logout");
-        session.setEndTime(new Timestamp(System.currentTimeMillis()));
+        // session.setMessage("logout");
+        // session.setEndTime(new Timestamp(System.currentTimeMillis()));
         sessionDao.update(session);
         setSession(null);
     }

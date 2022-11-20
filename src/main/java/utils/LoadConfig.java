@@ -6,7 +6,7 @@ import java.util.Properties;
 
 /**
  *
- * @author MSI
+ * @author Tran Thanh The
  */
 public class LoadConfig {
 

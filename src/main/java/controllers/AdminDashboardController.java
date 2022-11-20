@@ -6,8 +6,6 @@ import controllers.admin.FoodCategoryManagerController;
 import controllers.admin.FoodItemManagerController;
 import controllers.admin.OrderManagerController;
 import controllers.admin.StatisticalController;
-import controllers.admin.StatisticalEmployeeController;
-import controllers.admin.StatisticalIncomeController;
 import controllers.admin.TableManagerController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,8 +25,6 @@ import models.admin.FoodItemManagerView;
 import models.admin.ManagerPaneView;
 import models.admin.MenuItem;
 import models.admin.OrderManagerView;
-import models.admin.StatisticalEmployeeView;
-import models.admin.StatisticalIncomeView;
 import models.admin.StatisticalView;
 import models.admin.TableManagerView;
 
@@ -45,8 +41,6 @@ public class AdminDashboardController {
             orderManagerController = new OrderManagerController(),
             customerManagerController = new CustomerManagerController();
     StatisticalController statisticalController = new StatisticalController();
-    StatisticalIncomeController statisticalIncomeController = new StatisticalIncomeController();
-    StatisticalEmployeeController statisticalEmployeeController = new StatisticalEmployeeController();
 
     ManagerPaneView employeeManagerView = new EmployeeManagerView(), // View
             tableManagerView = new TableManagerView(),
@@ -55,13 +49,11 @@ public class AdminDashboardController {
             orderManagerView = new OrderManagerView(),
             customerManagerView = new CustomerManagerView();
     StatisticalView statisticalView = new StatisticalView();
-    StatisticalIncomeView statisticalIncomeView = new StatisticalIncomeView();
-    StatisticalEmployeeView statisticalEmployeeView = new StatisticalEmployeeView();
     AboutView aboutView = new AboutView();
     JPanel[] cards = {
         employeeManagerView, tableManagerView, customerManagerView,
         foodCategoryManagerView, orderManagerView, foodItemManagerView,
-        aboutView, statisticalView, statisticalIncomeView, statisticalEmployeeView
+        aboutView, statisticalView
     };
 
     SideBarController sideBarController = new SideBarController();
@@ -102,9 +94,6 @@ public class AdminDashboardController {
         menuQLHH.addSubMenu(new MenuItem("QLMA", im.getIcon("food_25px.png"), "Quản lý món ăn"));
         menuQLDH.addSubMenu(new MenuItem("QLB", im.getIcon("table_25px.png"), "Quản lý bàn"));
         menuQLDH.addSubMenu(new MenuItem("QLDDH", im.getIcon("purchase_order_25px.png"), "Quản lý đơn đặt hàng"));
-        // menuQLDH.addSubMenu(new MenuItem("QLGH", im.getIcon("truck_25px.png"), "Quản lý giao hàng"));
-        menuTK.addSubMenu(new MenuItem("TKNV", im.getIcon("user_25px.png"), "Thống kê nhân viên"));
-        menuTK.addSubMenu(new MenuItem("TKDT", null, "Thống kê doanh thu"));
         sideBarController.addMenu(menuQLNV, menuQLHH, menuQLDH, menuTK, menuAU);
         sideBarController.addMenuEvent(this::onMenuChange);
     }
@@ -164,16 +153,6 @@ public class AdminDashboardController {
                 view.setPanel(statisticalView);
                 statisticalController.setView(statisticalView);
                 statisticalController.initData();
-                break;
-            case "TKNV"://Thống kê nhân viên
-                view.setPanel(statisticalEmployeeView);
-                statisticalEmployeeController.setView(statisticalEmployeeView);
-                statisticalEmployeeController.initData();
-                break;
-            case "TKDT"://Thống kê doanh thu
-                view.setPanel(statisticalIncomeView);
-                statisticalIncomeController.setView(statisticalIncomeView);
-                statisticalIncomeController.initData();
                 break;
             case "TT":
                 view.setPanel(aboutView);
