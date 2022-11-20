@@ -42,6 +42,7 @@ public class LoginController {
         
         try {
             Employee employee = employeeDao.findByUsername(username);
+            
             if (employee == null) {
                 view.showError("Không tồn tại tài khoản!");
                 return;
@@ -52,12 +53,13 @@ public class LoginController {
             }
             
             SessionManager.create(employee);//Khởi tạo session
-
             switch (employee.getPermission()) {
                 case MANAGER:
                     //Admin controller
+                    
                     AdminDashboardController controller = new AdminDashboardController(new AdminDashboardView());
                     controller.getView().setPanel(new EmployeeManagerView());
+                    
                     view.dispose();// Tắt form đăng nhập
                     break;
                 case STAFF:

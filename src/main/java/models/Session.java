@@ -5,14 +5,12 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 
 /**
+ *
  * @author Nguyen Trung Kien
  */
-
-
 public class Session {
 
     private int id, idEmployee;
-    private Timestamp startTime, endTime;
     private Employee employee;
     private String message;
 
@@ -27,24 +25,8 @@ public class Session {
         this.id = id;
     }
 
-    public Timestamp getStartTime() {
-        return startTime;
-    }
-
-    public Timestamp getEndTime() {
-        return endTime;
-    }
-
     public Employee getEmployee() {
         return employee;
-    }
-
-    public void setStartTime(Timestamp startTime) {
-        this.startTime = startTime;
-    }
-
-    public void setEndTime(Timestamp endTime) {
-        this.endTime = endTime;
     }
 
     public void setEmployee(Employee employee) {
@@ -75,14 +57,11 @@ public class Session {
         s.setId(rs.getInt("id"));
         s.setIdEmployee(rs.getInt("idEmployee"));
         s.setMessage(rs.getNString("message"));
-        s.setStartTime(rs.getTimestamp("startTime"));
-        s.setEndTime(rs.getTimestamp("endTime"));
         return s;
     }
 
     @Override
     public String toString() {
-        return "Session{" + "id=" + id + ", idEmployee=" + idEmployee + ", startTime=" + startTime + ", endTime=" + endTime + ", message=" + message + '}';
+        return "Session{" + "id=" + id + ", idEmployee=" + idEmployee + ", message=" + message + '}';
     }
-
 }

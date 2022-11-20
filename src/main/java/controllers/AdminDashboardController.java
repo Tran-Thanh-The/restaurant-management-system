@@ -1,6 +1,5 @@
 package controllers;
 
-import controllers.admin.CustomerManagerController;
 import controllers.admin.EmployeeManagerController;
 import controllers.admin.FoodCategoryManagerController;
 import controllers.admin.FoodItemManagerController;
@@ -18,7 +17,6 @@ import utils.IconManager;
 import views.AdminDashboardView;
 import views.LoginView;
 import models.admin.AboutView;
-import models.admin.CustomerManagerView;
 import models.admin.EmployeeManagerView;
 import models.admin.FoodCategoryManagerView;
 import models.admin.FoodItemManagerView;
@@ -38,20 +36,18 @@ public class AdminDashboardController {
             tableManagerController = new TableManagerController(),
             foodCategoryManagerController = new FoodCategoryManagerController(),
             foodItemManagerController = new FoodItemManagerController(),
-            orderManagerController = new OrderManagerController(),
-            customerManagerController = new CustomerManagerController();
+            orderManagerController = new OrderManagerController();
     StatisticalController statisticalController = new StatisticalController();
 
     ManagerPaneView employeeManagerView = new EmployeeManagerView(), // View
             tableManagerView = new TableManagerView(),
             foodCategoryManagerView = new FoodCategoryManagerView(),
             foodItemManagerView = new FoodItemManagerView(),
-            orderManagerView = new OrderManagerView(),
-            customerManagerView = new CustomerManagerView();
+            orderManagerView = new OrderManagerView();
     StatisticalView statisticalView = new StatisticalView();
     AboutView aboutView = new AboutView();
     JPanel[] cards = {
-        employeeManagerView, tableManagerView, customerManagerView,
+        employeeManagerView, tableManagerView,
         foodCategoryManagerView, orderManagerView, foodItemManagerView,
         aboutView, statisticalView
     };
@@ -129,11 +125,6 @@ public class AdminDashboardController {
                 view.setPanel(tableManagerView);
                 tableManagerController.setView(tableManagerView);
                 tableManagerController.updateData();
-                break;
-            case "QLKH"://Quản lý khách hàng
-                view.setPanel(customerManagerView);
-                customerManagerController.setView(customerManagerView);
-                customerManagerController.updateData();
                 break;
             case "QLLM"://Quản lý loại món
                 view.setPanel(foodCategoryManagerView);

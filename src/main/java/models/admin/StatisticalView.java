@@ -28,10 +28,6 @@ public class StatisticalView extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(this, message);
     }
 
-    public JLabel getLbTotalCustomer() {
-        return lbTotalCustomer;
-    }
-
     public JLabel getLbTotalEmployee() {
         return lbTotalEmployee;
     }
@@ -86,12 +82,6 @@ public class StatisticalView extends javax.swing.JPanel {
         jPanel9 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         lbTotalEmployee = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jPanel12 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        lbTotalCustomer = new javax.swing.JLabel();
         pnlContent = new javax.swing.JPanel();
 
         setLayout(new java.awt.BorderLayout());
@@ -297,62 +287,6 @@ public class StatisticalView extends javax.swing.JPanel {
 
         pnlHead.add(jPanel7);
 
-        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel10.setPreferredSize(new java.awt.Dimension(245, 100));
-        jPanel10.setLayout(new java.awt.BorderLayout());
-
-        jPanel11.setBackground(new java.awt.Color(243, 156, 18));
-        jPanel11.setMaximumSize(new java.awt.Dimension(100, 100));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/customer_50px.png"))); // NOI18N
-        jLabel10.setName(""); // NOI18N
-
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
-        );
-
-        jPanel10.add(jPanel11, java.awt.BorderLayout.LINE_START);
-
-        jPanel12.setOpaque(false);
-        jPanel12.setLayout(new java.awt.GridBagLayout());
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel11.setText("Số KH");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.weighty = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        jPanel12.add(jLabel11, gridBagConstraints);
-
-        lbTotalCustomer.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbTotalCustomer.setText("10+");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.weighty = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        jPanel12.add(lbTotalCustomer, gridBagConstraints);
-
-        jPanel10.add(jPanel12, java.awt.BorderLayout.CENTER);
-
-        pnlHead.add(jPanel10);
-
         jPanel13.add(pnlHead, java.awt.BorderLayout.CENTER);
 
         add(jPanel13, java.awt.BorderLayout.PAGE_START);
@@ -366,8 +300,6 @@ public class StatisticalView extends javax.swing.JPanel {
     private com.toedter.calendar.JDateChooser dateChooserEnd;
     private com.toedter.calendar.JDateChooser dateChooserStart;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -376,9 +308,6 @@ public class StatisticalView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
@@ -389,7 +318,6 @@ public class StatisticalView extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JLabel lbTotalCustomer;
     private javax.swing.JLabel lbTotalEmployee;
     private javax.swing.JLabel lbTotalIncome;
     private javax.swing.JLabel lbTotalOrder;

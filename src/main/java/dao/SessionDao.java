@@ -57,25 +57,21 @@ public class SessionDao extends Dao<Session> {
 
     @Override
     public void save(Session t) throws SQLException {
-        String query = "INSERT INTO `session` (`idEmployee`, `startTime`, `endTime` , `message`) VALUES (?, ?, ?, ?)";
+        String query = "INSERT INTO `session` (`idEmployee`, `message`) VALUES (?, ?)";
 
         PreparedStatement stmt = conn.prepareStatement(query);
         stmt.setInt(1, t.getIdEmployee());
-        stmt.setTimestamp(2, t.getStartTime());
-        stmt.setTimestamp(3, t.getEndTime());
-        stmt.setNString(4, t.getMessage());
+        stmt.setNString(2, t.getMessage());
         int row = stmt.executeUpdate();
     }
 
     @Override
     public void update(Session t) throws SQLException {
-        String query = "UPDATE `session` SET `startTime` = ?, `endTime` = ?, `message` = ? WHERE `session`.`id` = ?";
+        String query = "UPDATE `session` SET `message` = ? WHERE `session`.`id` = ?";
 
         PreparedStatement stmt = conn.prepareStatement(query);
-        stmt.setTimestamp(1, t.getStartTime());
-        stmt.setTimestamp(2, t.getEndTime());
-        stmt.setNString(3, t.getMessage());
-        stmt.setInt(4, t.getId());
+        stmt.setNString(1, t.getMessage());
+        stmt.setInt(2, t.getId());
         int row = stmt.executeUpdate();
     }
 

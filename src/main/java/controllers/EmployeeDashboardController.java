@@ -1,6 +1,5 @@
 package controllers;
 
-import controllers.admin.CustomerManagerController;
 import controllers.admin.OrderManagerController;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -11,7 +10,6 @@ import utils.IconManager;
 import views.EmployeeDashboardView;
 import views.LoginView;
 import models.admin.AboutView;
-import models.admin.CustomerManagerView;
 import models.admin.ManagerPaneView;
 import models.admin.MenuItem;
 import models.admin.OrderManagerView;
@@ -22,14 +20,12 @@ import models.admin.OrderManagerView;
 public class EmployeeDashboardController {
 
     private EmployeeDashboardView view;
-    ManagerController orderManagerController = new OrderManagerController(),
-            customerManagerController = new CustomerManagerController();
-    ManagerPaneView orderManagerView = new OrderManagerView(),
-            customerManagerView = new CustomerManagerView();
+    ManagerController orderManagerController = new OrderManagerController();
+    ManagerPaneView orderManagerView = new OrderManagerView();
     AboutView aboutView = new AboutView();
 
     SideBarController sideBarController = new SideBarController();
-    JPanel[] cards = { orderManagerView, customerManagerView, aboutView};
+    JPanel[] cards = { orderManagerView, aboutView};
 
     public EmployeeDashboardController(EmployeeDashboardView view) {
         this.view = view;
@@ -82,11 +78,6 @@ public class EmployeeDashboardController {
 
     public void onMenuChange(MenuItem item) {
         switch (item.getId()) {
-            case "QLKH"://Quản lý khách hàng
-                view.setPanel(customerManagerView);
-                customerManagerController.setView(customerManagerView);
-                customerManagerController.updateData();
-                break;
             case "TT":
                 view.setPanel(aboutView);
                 break;

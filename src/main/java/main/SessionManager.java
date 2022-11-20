@@ -2,7 +2,6 @@ package main;
 
 import dao.SessionDao;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import models.Employee;
 import models.Session;
 
@@ -32,18 +31,15 @@ public class SessionManager {
         Session ss = new Session();
         ss.setEmployee(e);
         ss.setMessage("login");
-        ss.setStartTime(new Timestamp(System.currentTimeMillis()));
+        ss.setIdEmployee(e.getId());
         sessionDao.save(ss);
-        Session sss = sessionDao.getLast(e.getId());
-        setSession(sss);
+        setSession(ss);
     }
 
     public static void update() throws SQLException {
         if (session == null) {
             throw new SQLException("Ban chua dang nhap!");
         }
-        // session.setMessage("logout");
-        // session.setEndTime(new Timestamp(System.currentTimeMillis()));
         sessionDao.update(session);
         setSession(null);
     }
