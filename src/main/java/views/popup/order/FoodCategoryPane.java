@@ -2,7 +2,6 @@ package views.popup.order;
 
 import java.awt.Color;
 import models.FoodCategory;
-import utils.RandomColor;
 
 /**
  * createAt Dec 13, 2020
@@ -17,10 +16,6 @@ public class FoodCategoryPane extends javax.swing.JPanel {
         this.foodCategory = fc;
         initComponents();
         lbName.setText(fc.getName());
-        Color bg = RandomColor.getColor();
-        Color bgText = RandomColor.getContrastColor(bg);
-        setBackground(bg);
-        lbName.setForeground(bgText);
     }
 
     public FoodCategory getFoodCategory() {
@@ -34,14 +29,15 @@ public class FoodCategoryPane extends javax.swing.JPanel {
 
         lbName = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(96, 122, 178));
+        setForeground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         setMaximumSize(new java.awt.Dimension(150, 50));
         setPreferredSize(new java.awt.Dimension(150, 50));
         setLayout(new java.awt.GridBagLayout());
 
         lbName.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lbName.setForeground(new java.awt.Color(51, 0, 0));
+        lbName.setForeground(new java.awt.Color(255, 255, 255));
         lbName.setText("Topping");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
