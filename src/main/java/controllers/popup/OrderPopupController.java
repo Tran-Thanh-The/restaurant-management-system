@@ -6,7 +6,6 @@ import controllers.popup.order.OrderItemController;
 import dao.EmployeeDao;
 import dao.OrderDao;
 import dao.OrderItemDao;
-import dao.ShipmentDao;
 import dao.TableDao;
 import java.sql.Timestamp;
 import java.text.DecimalFormat;
@@ -16,15 +15,12 @@ import main.SessionManager;
 import models.Employee;
 import models.Order;
 import models.OrderItem;
-import models.Shipment;
 import models.Table;
 import utils.OrderStatus;
 import utils.OrderType;
-import utils.ShipmentStatus;
 import utils.TableStatus;
 import views.popup.AddOrderPopupView;
 import views.popup.EditOrderPopupView;
-import views.popup.ShipmentPopupView;
 import views.popup.ToppingPopupView;
 
 /**
@@ -34,13 +30,11 @@ public class OrderPopupController {
 
     OrderDao orderDao = new OrderDao();
     EmployeeDao employeeDao = new EmployeeDao();
-    ShipmentDao shipmentDao = new ShipmentDao();
     TableDao tableDao = new TableDao();
     OrderItemDao orderItemDao = new OrderItemDao();
     FoodItemController foodItemController = new FoodItemController();
     OrderItemController orderItemController = new OrderItemController();
     ToppingPopupController toppingPopupController = new ToppingPopupController();
-    ShipmentPopupController shipmentPopupController = new ShipmentPopupController();
     PrintOrderController printOrderController = new PrintOrderController();
     DecimalFormat formatter = new DecimalFormat("###,###,###");
     JFrame previousView;
@@ -124,9 +118,6 @@ public class OrderPopupController {
         order.setTotalAmount(orderItemController.getTotalAmount());
         orderDao.update(order);
         tableDao.update(order.getTable());
-        if (order.getType() != OrderType.ONLINE) {
-            shipmentDao.deleteById(order.getId());//Xóa đơn ship
-        }
         return true;
     }
 
@@ -275,13 +266,6 @@ public class OrderPopupController {
                 ec.onError(e);
             }
         });
-        view.getBtnShipManager().addActionListener(evt -> {
-            if (order.getType() != OrderType.ONLINE) {
-                view.showError("Bạn chỉ có thể ship đơn online");
-                return;
-            }
-            shipmentPopupController.add(new ShipmentPopupView(), order.getId(), () -> view.showMessage("Tạo / sửa đơn ship thành công!"), view::showError);
-        });
         view.getBtnPrintOrder().addActionListener(evt -> {
             try {
                 printOrderController.print(order.getId());
@@ -296,11 +280,6 @@ public class OrderPopupController {
                     return;
                 }
                 order.setStatus(OrderStatus.CANCEL);
-                Shipment shipment = shipmentDao.get(order.getId());
-                if (shipment != null) {
-                    shipment.setStatus(ShipmentStatus.CANCELLED);
-                    shipmentDao.update(shipment); // Hủy đơn ship
-                }
                 order.getTable().setStatus(TableStatus.FREE);
                 orderDao.update(order);
                 tableDao.update(order.getTable());

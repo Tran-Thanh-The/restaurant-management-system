@@ -9,7 +9,7 @@ import models.OrderItem;
 
 /**
  *
- * @author MSI
+ * @author Tran Thanh The
  */
 public class OrderItemDao extends Dao<OrderItem> {
 

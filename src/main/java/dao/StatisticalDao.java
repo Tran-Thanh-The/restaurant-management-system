@@ -167,16 +167,6 @@ public class StatisticalDao {
         return 0;
     }
 
-    public int getTotalCustomer() throws SQLException {
-        Statement statement = conn.createStatement();
-        String query = "SELECT COUNT(*) AS total FROM customer";
-        ResultSet rs = statement.executeQuery(query);
-        if (rs.next()) {
-            return rs.getInt("total");
-        }
-        return 0;
-    }
-
     public ArrayList<Statistical.ProductIncome> getQuantityItemByCategory(Timestamp start, Timestamp end, int Catetory) throws SQLException {
         ArrayList<Statistical.ProductIncome> itemProducts = new ArrayList<>();
         String query = "SELECT `name`,SUM(quantity) as sum FROM `order_item`,`food_item`,`order` "

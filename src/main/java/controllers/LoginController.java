@@ -36,10 +36,13 @@ public class LoginController {
     }
 
     public void login() {
+        
         String username = view.getTxtUsername().getText();
         String password = new String(view.getTxtPassword().getPassword());
+        
         try {
             Employee employee = employeeDao.findByUsername(username);
+            
             if (employee == null) {
                 view.showError("Không tồn tại tài khoản!");
                 return;
@@ -48,25 +51,21 @@ public class LoginController {
                 view.showError("Mật khẩu sai");
                 return;
             }
+            
             SessionManager.create(employee);//Khởi tạo session
-
             switch (employee.getPermission()) {
                 case MANAGER:
                     //Admin controller
+                    
                     AdminDashboardController controller = new AdminDashboardController(new AdminDashboardView());
                     controller.getView().setPanel(new EmployeeManagerView());
+                    
                     view.dispose();// Tắt form đăng nhập
                     break;
                 case STAFF:
                     EmployeeDashboardController controller1 = new EmployeeDashboardController(new EmployeeDashboardView());
                     controller1.getView().setPanel(new OrderManagerView());
                     view.dispose();// Tắt form đăng nhập                    
-                    break;
-                //Seller Controller
-                case INACTIVE:
-                    view.showError("Tài khoản của bạn đã bị khóa.\nVui lòng liên hệ admin để biết thêm chi tiết");
-                    SessionManager.update();
-                    view.dispose();
                     break;
                 default:
                     view.showError("Vui lòng liên hệ admin để biết thêm chi tiết");

@@ -15,7 +15,7 @@ import utils.OrderStatus;
 
 /**
  *
- * @author MSI
+ * @author Tran Thanh The
  */
 public class OrderDao extends Dao<Order> {
 

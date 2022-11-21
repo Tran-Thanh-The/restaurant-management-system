@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controllers;
 
-import controllers.employee.InformationController;
-import controllers.admin.CustomerManagerController;
 import controllers.admin.OrderManagerController;
-import controllers.admin.ShipmentManagerController;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -18,12 +10,9 @@ import utils.IconManager;
 import views.EmployeeDashboardView;
 import views.LoginView;
 import models.admin.AboutView;
-import models.admin.CustomerManagerView;
 import models.admin.ManagerPaneView;
 import models.admin.MenuItem;
 import models.admin.OrderManagerView;
-import models.admin.ShipmentManagerView;
-import views.employee.InformationView;
 
 /**
  * Nguyễn Trọng Dũng
@@ -31,19 +20,12 @@ import views.employee.InformationView;
 public class EmployeeDashboardController {
 
     private EmployeeDashboardView view;
-    ManagerController orderManagerController = new OrderManagerController(),
-            shipmentManagerController = new ShipmentManagerController(),
-            customerManagerController = new CustomerManagerController();
-    InformationController informationController = new InformationController();
-    ManagerPaneView orderManagerView = new OrderManagerView(),
-            shipmentManagerView = new ShipmentManagerView(),
-            customerManagerView = new CustomerManagerView();
+    ManagerController orderManagerController = new OrderManagerController();
+    ManagerPaneView orderManagerView = new OrderManagerView();
     AboutView aboutView = new AboutView();
-    InformationView informationView = new InformationView();
 
     SideBarController sideBarController = new SideBarController();
-    JPanel[] cards = { orderManagerView, customerManagerView,
-        shipmentManagerView, aboutView, informationView};
+    JPanel[] cards = { orderManagerView, aboutView};
 
     public EmployeeDashboardController(EmployeeDashboardView view) {
         this.view = view;
@@ -72,13 +54,9 @@ public class EmployeeDashboardController {
 
     private void initMenu() {
         IconManager im = new IconManager();
-        MenuItem menuKH = new MenuItem("QLKH", im.getIcon("technical_support_25px.png"), "Quản lý khách hàng");
         MenuItem menuQLDDH = new MenuItem("QLDDH", im.getIcon("purchase_order_25px.png"), "Quản lý đơn đặt hàng");
-        MenuItem menuQLGH = new MenuItem("QLGH", im.getIcon("truck_25px.png"), "Quản lý giao hàng");
-        MenuItem menuTL = new MenuItem("TL", im.getIcon("settings_25px.png"), "Thiết lập");
-        menuTL.addSubMenu(new MenuItem("TTCN", im.getIcon("about_25px.png"), "Thông tin cá nhân"));
-        menuTL.addSubMenu(new MenuItem("TT", im.getIcon("help_25px.png"), "About us"));
-        sideBarController.addMenu(menuQLDDH, menuKH, menuQLGH, menuTL);
+        MenuItem menuTT = new MenuItem("TT", im.getIcon("help_25px.png"), "About us");
+        sideBarController.addMenu(menuQLDDH, menuTT);
         sideBarController.addMenuEvent(this::onMenuChange);
     }
 
@@ -100,22 +78,8 @@ public class EmployeeDashboardController {
 
     public void onMenuChange(MenuItem item) {
         switch (item.getId()) {
-            case "QLKH"://Quản lý khách hàng
-                view.setPanel(customerManagerView);
-                customerManagerController.setView(customerManagerView);
-                customerManagerController.updateData();
-                break;
-            case "QLGH"://Quản lý giao hàng
-                view.setPanel(shipmentManagerView);
-                shipmentManagerController.setView(shipmentManagerView);
-                shipmentManagerController.updateData();
-                break;
             case "TT":
                 view.setPanel(aboutView);
-                break;
-            case "TTCN": // Thống tin cá nhân
-                view.setPanel(informationView);
-                informationController.setView(informationView);
                 break;
             default:
                 view.setPanel(orderManagerView);
