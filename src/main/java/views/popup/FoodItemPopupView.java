@@ -49,14 +49,6 @@ public class FoodItemPopupView extends javax.swing.JFrame implements PopupView {
         this.btnCancel = btnCancel;
     }
 
-    public JButton getBtnChooseImage() {
-        return btnChooseImage;
-    }
-
-    public void setBtnChooseImage(JButton btnChooseImage) {
-        this.btnChooseImage = btnChooseImage;
-    }
-
     public JButton getBtnOK() {
         return btnOK;
     }
@@ -129,10 +121,6 @@ public class FoodItemPopupView extends javax.swing.JFrame implements PopupView {
         this.foodCategoryComboBoxModel = foodCategoryComboBoxModel;
     }
 
-    public JLabel getLbPreviewImage() {
-        return lbPreviewImage;
-    }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -153,11 +141,9 @@ public class FoodItemPopupView extends javax.swing.JFrame implements PopupView {
         txtName = new javax.swing.JTextField();
         txtDescription = new javax.swing.JTextField();
         txtUrlImage = new javax.swing.JTextField();
-        btnChooseImage = new javax.swing.JButton();
         txtUnitName = new javax.swing.JTextField();
         txtUnitPrice = new javax.swing.JTextField();
         cboCategory = new javax.swing.JComboBox<>();
-        lbPreviewImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -259,23 +245,20 @@ public class FoodItemPopupView extends javax.swing.JFrame implements PopupView {
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         jPanel3.add(txtDescription, gridBagConstraints);
+
+        txtUrlImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUrlImageActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridwidth = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.2;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 0);
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         jPanel3.add(txtUrlImage, gridBagConstraints);
-
-        btnChooseImage.setText("Chọn Ảnh");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.01;
-        gridBagConstraints.insets = new java.awt.Insets(5, 0, 5, 5);
-        jPanel3.add(btnChooseImage, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
@@ -300,26 +283,18 @@ public class FoodItemPopupView extends javax.swing.JFrame implements PopupView {
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         jPanel3.add(cboCategory, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 6;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.BASELINE;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.weighty = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        jPanel3.add(lbPreviewImage, gridBagConstraints);
 
         getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtUrlImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUrlImageActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUrlImageActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnChooseImage;
     private javax.swing.JButton btnOK;
     private javax.swing.JComboBox<FoodCategory> cboCategory;
     private javax.swing.JLabel jLabel2;
@@ -331,7 +306,6 @@ public class FoodItemPopupView extends javax.swing.JFrame implements PopupView {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel lbPreviewImage;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JTextField txtDescription;
     private javax.swing.JTextField txtName;

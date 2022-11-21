@@ -3,62 +3,17 @@ package controllers.popup;
 import dao.FoodCategoryDao;
 import dao.FoodItemDao;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
 import models.FoodCategory;
 import models.FoodItem;
-import utils.ImageManager;
-import utils.StringToSlug;
-import views.ChooseImageView;
 import views.popup.FoodItemPopupView;
 
 /**
- * Nguyễn Trọng Dũng
+ * Tran Thanh The
  */
 public class FoodItemPopupController {
 
     FoodItemDao foodItemDao = new FoodItemDao();
     FoodCategoryDao foodCategoryDao = new FoodCategoryDao();
-    ChooseImageView chooseImageView = new ChooseImageView();
-    ImageManager imageManager = new ImageManager();
-    String resourcesPath = getClass().getResource("/images/").getPath();
-    JFrame previousView;
-
-    private ActionListener eventShowChooseFileDialog(FoodItemPopupView view) {
-        return evt -> {
-            int otp = chooseImageView.showOpenDialog(view);
-            switch (otp) {
-                case JFileChooser.APPROVE_OPTION:
-                    File file = chooseImageView.getSelectedFile();
-                    BufferedImage bi;
-                    try {
-                        bi = ImageIO.read(file);
-                        String name = StringToSlug.convert(view.getTxtName().getText());
-                        String pth = imageManager.saveImage(bi, name);
-                        view.getTxtUrlImage().setText(pth);
-                        renderPreviewImage(view);
-                    } catch (Exception e) {
-                        view.showError(e);
-                    }
-                    break;
-                case JFileChooser.CANCEL_OPTION:
-                    view.getTxtUrlImage().setText("");
-                    break;
-
-            }
-        };
-    }
-
-    private void renderPreviewImage(FoodItemPopupView view) throws Exception {
-        String urlImage = view.getTxtUrlImage().getText();
-        ImageIcon icon = urlImage.isEmpty() ? null : imageManager.getImage(urlImage);
-        view.getLbPreviewImage().setIcon(icon);
-        view.pack();
-    }
 
     private void initComboBox(FoodItemPopupView view) { //Khởi tạo danh mục loai mon
         try {
@@ -70,15 +25,9 @@ public class FoodItemPopupController {
     }
 
     public void add(FoodItemPopupView view, SuccessCallback sc, ErrorCallback ec) {
-        if (previousView != null && previousView.isDisplayable()) {
-            previousView.requestFocus();
-            return;
-        }
-        previousView = view;
         view.setVisible(true);
         view.getBtnCancel().addActionListener(evt -> view.dispose());
         initComboBox(view);
-        view.getBtnChooseImage().addActionListener(eventShowChooseFileDialog(view));
         view.getBtnOK().addActionListener(evt -> {
             try {
                 addFoodItem(view);
@@ -92,24 +41,7 @@ public class FoodItemPopupController {
 
     }
 
-    public boolean isExistsImage(String imagePath) {
-        try {
-            if (imagePath.isEmpty()) {
-                return false;
-            }
-            File f = new File(resourcesPath + imagePath);
-            return f.exists() && !f.isDirectory();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
     public void edit(FoodItemPopupView view, FoodItem foodItem, SuccessCallback sc, ErrorCallback ec) {
-        if (previousView != null && previousView.isDisplayable()) {
-            previousView.requestFocus();
-            return;
-        }
-        previousView = view;
         view.setVisible(true);
         view.getBtnCancel().addActionListener(evt -> view.dispose());
         initComboBox(view);
@@ -128,17 +60,6 @@ public class FoodItemPopupController {
         FoodCategory fc = new FoodCategory();
         fc.setId(foodItem.getIdCategory());
         view.getCboCategory().setSelectedItem(fc);
-        if (isExistsImage(foodItem.getUrlImage())) {
-            view.getTxtUrlImage().setText(foodItem.getUrlImage());
-        } else {
-            view.getTxtUrlImage().setText("");
-        }
-        try {
-            renderPreviewImage(view);
-        } catch (Exception e) {
-            ec.onError(e);
-        }
-        view.getBtnChooseImage().addActionListener(eventShowChooseFileDialog(view));
         view.getBtnOK().addActionListener(evt -> {
             try {
                 editFoodItem(view, foodItem);
