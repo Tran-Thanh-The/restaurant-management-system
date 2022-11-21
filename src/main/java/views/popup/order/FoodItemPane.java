@@ -54,7 +54,7 @@ public class FoodItemPane extends javax.swing.JPanel {
         lbName = new javax.swing.JLabel();
         lbPrice = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(118, 215, 196));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         setMaximumSize(new java.awt.Dimension(300, 75));
@@ -87,7 +87,7 @@ public class FoodItemPane extends javax.swing.JPanel {
         lbName.setName(""); // NOI18N
         lbName.setPreferredSize(new java.awt.Dimension(20, 20));
 
-        lbPrice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbPrice.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbPrice.setForeground(new java.awt.Color(255, 0, 0));
         lbPrice.setText("50,000 VND / Ly");
 
@@ -98,10 +98,10 @@ public class FoodItemPane extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbName, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(lbPrice)
-                        .addGap(0, 121, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -109,9 +109,9 @@ public class FoodItemPane extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(lbPrice)
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         add(jPanel2, java.awt.BorderLayout.CENTER);
