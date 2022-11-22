@@ -7,7 +7,6 @@ import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.Date;
-import utils.Debouncer;
 import utils.IntervalIncrease;
 import models.admin.StatisticalView;
 
@@ -19,7 +18,6 @@ public class StatisticalController {
     StatisticalView view;
     StatisticalDao statisticalDao = new StatisticalDao();
     DecimalFormat formatter = new DecimalFormat("###,###,###");
-    Debouncer debouncer = new Debouncer();
 
     public StatisticalController() {
     }

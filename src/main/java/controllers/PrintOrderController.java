@@ -17,6 +17,7 @@ import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
+
 /**
  * Nguyễn Trọng Dũng
  */
@@ -30,11 +31,15 @@ public class PrintOrderController {
 
     public PrintOrderController() {
         document = new XWPFDocument();
-        orderFile = new File("D:\\Desktop\\Order\\order.docx");
+        String resourcePath = getClass().getResource("").getPath().replace("target/classes/controllers/", "Order").substring(1);
+        resourcePath = resourcePath.replace("/", "\\");
+        orderFile = new File(resourcePath + "\\order.docx");
     }
 
     public void print(int id) throws Exception {
-        orderFile = new File("D:\\Desktop\\Order\\order-" + id + ".docx");
+        String resourcePath = getClass().getResource("").getPath().replace("target/classes/controllers/", "Order").substring(1);
+        resourcePath = resourcePath.replace("/", "\\");
+        orderFile = new File(resourcePath + "\\order-" + id + ".docx");
         OrderDao orderDao = new OrderDao();
         OrderItemDao orderItemDao = new OrderItemDao();
         Order order = orderDao.get(id);
@@ -75,10 +80,6 @@ public class PrintOrderController {
         XWPFRun run;
         int fontSize = 12;
         paragraph = document.createParagraph();
-//        paragraph.setBorderBottom(Borders.BASIC_WIDE_MIDLINE);
-//        paragraph.setBorderTop(Borders.BASIC_WIDE_MIDLINE);
-//        paragraph.setBorderLeft(Borders.BASIC_WIDE_MIDLINE);
-//        paragraph.setBorderRight(Borders.BASIC_WIDE_MIDLINE);
         paragraph.setAlignment(ParagraphAlignment.LEFT);
 
         run = paragraph.createRun();
@@ -127,7 +128,6 @@ public class PrintOrderController {
         XWPFParagraph paragraph;
         XWPFRun run;
         paragraph = document.createParagraph();
-//        paragraph.setBorderBottom(Borders.BALLOONS_3_COLORS);
         paragraph.setAlignment(ParagraphAlignment.LEFT);
 
         run = paragraph.createRun();

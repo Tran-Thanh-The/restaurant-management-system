@@ -12,9 +12,8 @@ import utils.ErrorPopup;
 import utils.ImageManager;
 
 /**
- * createAt Dec 14, 2020
  *
- * @author Đỗ Tuấn Anh <daclip26@gmail.com>
+ * @author Tran Thanh The
  */
 public class FoodItemPane extends javax.swing.JPanel {
 
