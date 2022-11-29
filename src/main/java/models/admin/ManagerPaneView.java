@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.BorderFactory;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import models.Model;
@@ -30,7 +31,7 @@ public abstract class ManagerPaneView<T extends Model> extends JPanel {
         initComponents();
         tblData.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
         tblData.getTableHeader().setOpaque(false);
-        tblData.getTableHeader().setBackground(new Color(51, 175, 255));
+        tblData.getTableHeader().setBackground(new Color(64, 66, 88));
         tblData.getTableHeader().setForeground(new Color(255, 255, 255));
         ((DefaultTableCellRenderer) tblData.getTableHeader().getDefaultRenderer())
                 .setHorizontalAlignment(JLabel.LEFT);
@@ -40,7 +41,6 @@ public abstract class ManagerPaneView<T extends Model> extends JPanel {
         btnDelete.setIcon(im.getIcon("delete_25px.png"));
         btnSync.setIcon(im.getIcon("sync_25px.png"));
         tblData.setModel(tableModel);
-//        cbx_list.putClientProperty("JButton.buttonType", "roundRect");
         btnAdd.putClientProperty("JButton.buttonType", "roundRect");
         btnDelete.putClientProperty("JButton.buttonType", "roundRect");
         btnEdit.putClientProperty("JButton.buttonType", "roundRect");
@@ -156,8 +156,6 @@ public abstract class ManagerPaneView<T extends Model> extends JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblData = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         btnDelete = new javax.swing.JButton();
         btnSync = new javax.swing.JButton();
@@ -166,33 +164,17 @@ public abstract class ManagerPaneView<T extends Model> extends JPanel {
         jPanel2 = new javax.swing.JPanel();
         txtSearch = new javax.swing.JTextField();
         cboSearchField = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblData = new javax.swing.JTable();
+        jPanel3 = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(118, 215, 196));
+        setBackground(new java.awt.Color(107, 114, 142));
         setAlignmentX(0.0F);
         setAlignmentY(0.0F);
         setPreferredSize(new java.awt.Dimension(1008, 680));
         setLayout(new java.awt.BorderLayout());
 
-        jScrollPane1.setOpaque(false);
-
-        tblData.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        tblData.setFocusable(false);
-        tblData.setRowHeight(30);
-        tblData.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(tblData);
-
-        add(jScrollPane1, java.awt.BorderLayout.CENTER);
-
+        jPanel1.setBackground(new java.awt.Color(107, 114, 142));
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
@@ -238,6 +220,7 @@ public abstract class ManagerPaneView<T extends Model> extends JPanel {
 
         add(jPanel1, java.awt.BorderLayout.LINE_END);
 
+        jPanel2.setBackground(new java.awt.Color(107, 114, 142));
         jPanel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 10));
         jPanel2.setOpaque(false);
         jPanel2.setPreferredSize(new java.awt.Dimension(1008, 40));
@@ -256,6 +239,29 @@ public abstract class ManagerPaneView<T extends Model> extends JPanel {
         jPanel2.add(cboSearchField);
 
         add(jPanel2, java.awt.BorderLayout.PAGE_START);
+
+        jScrollPane1.setOpaque(false);
+
+        tblData.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tblData.setFocusable(false);
+        tblData.setRowHeight(30);
+        tblData.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(tblData);
+
+        add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        jPanel3.setBackground(new java.awt.Color(107, 114, 142));
+        add(jPanel3, java.awt.BorderLayout.LINE_START);
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -266,6 +272,7 @@ public abstract class ManagerPaneView<T extends Model> extends JPanel {
     private javax.swing.JComboBox<String> cboSearchField;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblData;
     private javax.swing.JTextField txtSearch;

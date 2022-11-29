@@ -13,7 +13,6 @@ public class Employee extends Model {
 
     protected int id;
     protected String username, password, name, phoneNumber;
-//    protected int permissionId;
     protected EmployeePermission permission;
     protected Date startDate;
     protected int salary;
@@ -111,8 +110,13 @@ public class Employee extends Model {
     public Object[] toRowTable() {
         return new Object[]{
             id, name, username, password,
-            phoneNumber, startDate, permission.getName(),
-            salary
+            phoneNumber, permission.getName()
+        };
+    }
+
+    public Object[] toRowTable1() {
+        return new Object[]{
+            id, name, salary
         };
     }
 

@@ -125,7 +125,7 @@ public class OrderItemPane extends javax.swing.JPanel {
         add(jPanel2, java.awt.BorderLayout.LINE_END);
 
         jPanel3.setOpaque(false);
-        jPanel3.setPreferredSize(new java.awt.Dimension(300, 75));
+        jPanel3.setPreferredSize(new java.awt.Dimension(280, 75));
 
         lbFoodName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbFoodName.setText("Trà Sữa Trân Châu Khổng Lồ");

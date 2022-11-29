@@ -1,6 +1,7 @@
 package controllers.admin;
 
-import dao.StatisticalDao;
+import dao.EmployeeDao;
+import dao.OrderDao;
 import java.beans.PropertyChangeListener;
 import java.sql.SQLException;
 import java.sql.Timestamp;
@@ -9,6 +10,10 @@ import java.util.Calendar;
 import java.util.Date;
 import utils.IntervalIncrease;
 import models.admin.StatisticalView;
+import models.Employee;
+import models.Order;
+import java.util.ArrayList;
+import java.text.SimpleDateFormat;
 
 /**
  * Nguyễn Trọng Dũng
@@ -16,7 +21,8 @@ import models.admin.StatisticalView;
 public class StatisticalController {
 
     StatisticalView view;
-    StatisticalDao statisticalDao = new StatisticalDao();
+    EmployeeDao employeeDao = new EmployeeDao();
+    OrderDao orderDao = new OrderDao();
     DecimalFormat formatter = new DecimalFormat("###,###,###");
 
     public StatisticalController() {
@@ -38,5 +44,22 @@ public class StatisticalController {
         view.getDateChooserEnd().setCalendar(c);
         c.add(Calendar.DATE, -30);
         view.getDateChooserStart().setCalendar(c);
+        try {
+            ArrayList<Employee> employees = employeeDao.getAll();
+            view.setTableData1(employees);
+        } catch (Exception e) {
+            view.showError(e);
+        }
+
+        try {
+            // Date start = view.getDateChooserStart().getDate();
+            // Date end = view.getDateChooserEnd().getDate();
+            // Timestamp start_at = new Timestamp(start.getTime());  
+            // Timestamp end_at = new Timestamp(end.getTime());  
+            ArrayList<Order> orders = orderDao.getAll();
+            view.setTableData2(orders);
+        } catch (Exception e) {
+            view.showError(e);
+        }
     }
 }

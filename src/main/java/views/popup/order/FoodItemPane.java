@@ -53,12 +53,13 @@ public class FoodItemPane extends javax.swing.JPanel {
         lbName = new javax.swing.JLabel();
         lbPrice = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(118, 215, 196));
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        setBackground(new java.awt.Color(236, 236, 236));
+        // setBackground(new java.awt.Color(118, 215, 196));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(71, 78, 104)));
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        setMaximumSize(new java.awt.Dimension(300, 75));
-        setMinimumSize(new java.awt.Dimension(300, 75));
-        setPreferredSize(new java.awt.Dimension(300, 75));
+        setMaximumSize(new java.awt.Dimension(296, 75));
+        setMinimumSize(new java.awt.Dimension(296, 75));
+        setPreferredSize(new java.awt.Dimension(296, 75));
         setLayout(new java.awt.BorderLayout());
 
         jPanel1.setOpaque(false);

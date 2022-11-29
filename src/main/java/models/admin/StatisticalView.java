@@ -2,18 +2,52 @@
 package models.admin;
 
 import com.toedter.calendar.JDateChooser;
+import java.awt.Color;
+import java.awt.Font;
+import java.util.ArrayList;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
+import models.Model;
 import utils.ErrorPopup;
+import models.Employee;
+import models.Order;
 
 /**
  * @author Nguyen Trung Kien
  */
-public class StatisticalView extends javax.swing.JPanel {
+public class StatisticalView<T extends Model> extends JPanel {
+     DefaultTableModel tableModel1  = new DefaultTableModel();
+     DefaultTableModel tableModel2  = new DefaultTableModel();
+     ArrayList<Employee> tableData1 = new ArrayList<>();
+     ArrayList<Order> tableData2 = new ArrayList<>();
 
     public StatisticalView() {
         initComponents();
+        jTable1.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+        jTable1.getTableHeader().setOpaque(false);
+        jTable1.getTableHeader().setBackground(new Color(64, 66, 88));
+        jTable1.getTableHeader().setForeground(new Color(255, 255, 255));
+        ((DefaultTableCellRenderer) jTable1.getTableHeader().getDefaultRenderer())
+                .setHorizontalAlignment(JLabel.LEFT);
+        jTable1.setAutoCreateRowSorter(true);
+        jTable1.setModel(tableModel1);
+
+        jTable2.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+        jTable2.getTableHeader().setOpaque(false);
+        jTable2.getTableHeader().setBackground(new Color(64, 66, 88));
+        jTable2.getTableHeader().setForeground(new Color(255, 255, 255));
+        ((DefaultTableCellRenderer) jTable2.getTableHeader().getDefaultRenderer())
+                .setHorizontalAlignment(JLabel.LEFT);
+        jTable2.setAutoCreateRowSorter(true);
+        jTable2.setModel(tableModel2);
+
+        setTableModel1();
+        renderTable1();
+        setTableModel2();
+        renderTable2();
     }
 
     public void showError(String message) {
@@ -52,11 +86,63 @@ public class StatisticalView extends javax.swing.JPanel {
         return pnlContent;
     }
 
+    public void setTableData1(ArrayList<Employee> tableData) {
+        this.tableData1 = tableData;
+        renderTable1();
+    }
+    public DefaultTableModel getTableModel1() {
+        return this.tableModel1;
+    }
+
+    public void setTableData2(ArrayList<Order> tableData) {
+        this.tableData2 = tableData;
+        renderTable2();
+    }
+    public DefaultTableModel getTableModel2() {
+        return this.tableModel2;
+    }
+
+    public void renderTable1() {
+        tableModel1.setNumRows(0);
+        try {
+            for (Employee item : tableData1) {
+                tableModel1.addRow(item.toRowTable1());
+            }
+        } catch (Exception e) {
+            showError(e);
+        }
+    }
+
+    public void renderTable2() {
+        tableModel2.setNumRows(0);
+        try {
+            for (Order item : tableData2) {
+                tableModel2.addRow(item.toRowTable1());
+            }
+        } catch (Exception e) {
+            showError(e);
+        }
+    }
+
+    public void setTableModel1() {
+        tableModel1.addColumn("Id");
+        tableModel1.addColumn("Tên nhân viên");
+        tableModel1.addColumn("Lương");
+    }
+
+    public void setTableModel2() {
+        tableModel2.addColumn("Id");
+        tableModel2.addColumn("Thời gian");
+        tableModel2.addColumn("Tổng tiền");
+        tableModel2.addColumn("Trạng thái");
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        jPanel11 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -83,6 +169,24 @@ public class StatisticalView extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         lbTotalEmployee = new javax.swing.JLabel();
         pnlContent = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jPanel15 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setLayout(new java.awt.BorderLayout());
 
@@ -293,6 +397,86 @@ public class StatisticalView extends javax.swing.JPanel {
 
         pnlContent.setPreferredSize(new java.awt.Dimension(1008, 530));
         pnlContent.setLayout(new java.awt.CardLayout());
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 508, Short.MAX_VALUE)
+            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE))
+        );
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 494, Short.MAX_VALUE)
+            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        pnlContent.add(jPanel10, "card2");
+
         add(pnlContent, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -308,8 +492,12 @@ public class StatisticalView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -318,6 +506,10 @@ public class StatisticalView extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JLabel lbTotalEmployee;
     private javax.swing.JLabel lbTotalIncome;
     private javax.swing.JLabel lbTotalOrder;

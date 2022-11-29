@@ -12,6 +12,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import models.Order;
 import utils.OrderStatus;
+import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  *
@@ -41,6 +43,22 @@ public class OrderDao extends Dao<Order> {
         ArrayList<Order> orders = new ArrayList<>();
         Statement statement = conn.createStatement();
         String query = "SELECT * FROM `order`  WHERE `idEmployee`= '" + idEmployee + "' ORDER BY `order`.`orderDate` DESC";
+        ResultSet rs = statement.executeQuery(query);
+        while (rs.next()) {
+            Order order = Order.getFromResultSet(rs);
+            order.setEmployee(employeeDao.get(order.getIdEmployee()));
+            order.setTable(tableDao.get(order.getIdTable()));
+            orders.add(order);
+        }
+        return orders;
+    }
+
+    public ArrayList<Order> getAll (Timestamp start, Timestamp end) throws SQLException {
+        ArrayList<Order> orders = new ArrayList<>();
+        String query = "SELECT * FROM `order` WHERE DATE(orderDate) >= DATE(?)  AND DATE(orderDate) <= DATE(?) ORDER BY `order`.`orderDate` DESC";
+        PreparedStatement statement = conn.prepareStatement(query);
+        statement.setTimestamp(1, start);
+        statement.setTimestamp(2, end);
         ResultSet rs = statement.executeQuery(query);
         while (rs.next()) {
             Order order = Order.getFromResultSet(rs);

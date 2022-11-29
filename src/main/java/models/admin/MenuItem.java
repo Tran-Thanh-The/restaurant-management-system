@@ -5,6 +5,8 @@ import java.util.Objects;
 import javax.swing.Icon;
 import utils.IconManager;
 import utils.SidebarColor;
+import java.awt.Color;
+import java.awt.Font;
 
 /**
  * @author Nguyen Trung Kien
@@ -17,7 +19,6 @@ public class MenuItem extends javax.swing.JPanel {
     private int level;
     public boolean active; // Biến kiểm tra xem có đang chọn không
     IconManager im = new IconManager();
-//    Color inactiveChildColor = Color.decode("#D5DBDB"), inactiveParrentColor = Color.decode("#D5DBDB"), activeParrentColor = Color.decode("#F5CBA7"), activeChildColor = Color.decode("#EAFAF1"); // Màu tương ứng
 
     public MenuItem(String id, Icon icon, String menuName, MenuItem... subMenu) {
         initComponents();
@@ -81,17 +82,6 @@ public class MenuItem extends javax.swing.JPanel {
             lbOpen.setVisible(false);
             this.updateUI();
         }
-//        if (!active) {
-//            if (hasSubMenu() || getParentMenu() == null) {
-//                setBackground(inactiveParrentColor);
-//            } else {
-//                setBackground(inactiveChildColor);
-//            }
-//        } else if (hasSubMenu() || getParentMenu() == null) {
-//            setBackground(activeParrentColor);
-//        } else {
-//            setBackground(activeChildColor);
-//        }
     }
 
     //Kiểm tra xem có menu con không
@@ -100,13 +90,6 @@ public class MenuItem extends javax.swing.JPanel {
     }
 
     public boolean equals(MenuItem obj) {
-//        if (this == obj) {
-//            return true;
-//        }
-//        if (obj == null) {
-//            return true;
-//        }
-//        return obj.getId() == this.getId();
         return this == obj;
     }
 
@@ -148,8 +131,9 @@ public class MenuItem extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         lbMenuName = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        setBackground(new java.awt.Color(64, 66, 88));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 2));
+        setToolTipText("");
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         setPreferredSize(new java.awt.Dimension(200, 45));
         setLayout(new java.awt.BorderLayout());
@@ -214,7 +198,7 @@ public class MenuItem extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addComponent(lbMenuName)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

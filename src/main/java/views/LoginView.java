@@ -74,7 +74,7 @@ public class LoginView extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
-        jPanel4.setBackground(new java.awt.Color(87, 184, 70));
+        jPanel4.setBackground(new java.awt.Color(64, 66, 88));
         jPanel4.setMaximumSize(new java.awt.Dimension(400, 75));
         jPanel4.setMinimumSize(new java.awt.Dimension(400, 75));
         jPanel4.setPreferredSize(new java.awt.Dimension(400, 75));
@@ -110,7 +110,7 @@ public class LoginView extends javax.swing.JFrame {
         lblRegister.setForeground(new java.awt.Color(0, 132, 255));
         lblRegister.setText("Chưa có tài khoản?");
 
-        btnLogin.setBackground(new java.awt.Color(87, 184, 70));
+        btnLogin.setBackground(new java.awt.Color(64, 66, 88));
         btnLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Đăng Nhập");
