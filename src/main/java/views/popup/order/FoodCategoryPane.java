@@ -29,11 +29,11 @@ public class FoodCategoryPane extends javax.swing.JPanel {
 
         lbName = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(96, 122, 178));
+        setBackground(new java.awt.Color(71, 78, 104));
         setForeground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        setMaximumSize(new java.awt.Dimension(150, 50));
-        setPreferredSize(new java.awt.Dimension(150, 50));
+        setMaximumSize(new java.awt.Dimension(140, 50));
+        setPreferredSize(new java.awt.Dimension(140, 50));
         setLayout(new java.awt.GridBagLayout());
 
         lbName.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N

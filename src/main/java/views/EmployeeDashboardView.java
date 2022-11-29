@@ -124,7 +124,7 @@ public class EmployeeDashboardView extends javax.swing.JFrame {
         panelLeft.setPreferredSize(new java.awt.Dimension(200, 680));
         panelLeft.setLayout(new java.awt.BorderLayout());
 
-        panelHeader.setBackground(new java.awt.Color(34, 153, 84));
+        panelHeader.setBackground(new java.awt.Color(64, 66, 88));
         panelHeader.setPreferredSize(new java.awt.Dimension(200, 50));
         panelHeader.setLayout(new java.awt.GridBagLayout());
 

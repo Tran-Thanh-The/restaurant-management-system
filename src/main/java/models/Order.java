@@ -156,4 +156,9 @@ public class Order extends Model {
         };
     }
 
+    public Object[] toRowTable1() {
+        return new Object[]{
+            this.getId(), this.getOrderDate(), this.getPaidAmount(), this.getStatus().getName()
+        };
+    }
 }

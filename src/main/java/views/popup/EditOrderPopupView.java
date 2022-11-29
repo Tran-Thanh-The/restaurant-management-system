@@ -90,7 +90,7 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        pnlTop.setPreferredSize(new java.awt.Dimension(1500, 40));
+        pnlTop.setPreferredSize(new java.awt.Dimension(1560, 40));
         pnlTop.setLayout(new java.awt.GridBagLayout());
 
         lbTitle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -387,7 +387,6 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
 
         getContentPane().add(pnlLeft, java.awt.BorderLayout.LINE_START);
 
-        pnlRight.setBackground(new java.awt.Color(102, 102, 0));
         pnlRight.setPreferredSize(new java.awt.Dimension(525, 600));
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Danh sách món đã đặt"));
@@ -395,18 +394,18 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setOpaque(false);
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(525, 5002));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(525, 5000));
 
-        pnlOrderItem.setMaximumSize(new java.awt.Dimension(515, 5000));
-        pnlOrderItem.setPreferredSize(new java.awt.Dimension(515, 5000));
+        pnlOrderItem.setMaximumSize(new java.awt.Dimension(500, 5000));
+        pnlOrderItem.setPreferredSize(new java.awt.Dimension(500, 5000));
         jScrollPane1.setViewportView(pnlOrderItem);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -418,9 +417,9 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
         pnlRight.setLayout(pnlRightLayout);
         pnlRightLayout.setHorizontalGroup(
             pnlRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlRightLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(pnlRightLayout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, 519, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pnlRightLayout.setVerticalGroup(
             pnlRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -431,11 +430,12 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
 
         pnlCenter.setLayout(new java.awt.BorderLayout());
 
+        pnlFoodCategory.setBorder(javax.swing.BorderFactory.createTitledBorder("Các loại đồ ăn"));
         pnlFoodCategory.setPreferredSize(new java.awt.Dimension(150, 600));
         pnlFoodCategory.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 0, 5));
 
         jPanel10.setBackground(new java.awt.Color(153, 153, 255));
-        jPanel10.setPreferredSize(new java.awt.Dimension(150, 50));
+        jPanel10.setPreferredSize(new java.awt.Dimension(135, 50));
 
         jLabel11.setBackground(new java.awt.Color(102, 51, 0));
         jLabel11.setText("Trà sữa");
@@ -447,7 +447,7 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(jLabel11)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -460,7 +460,7 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
         pnlFoodCategory.add(jPanel10);
 
         jPanel11.setBackground(new java.awt.Color(51, 255, 255));
-        jPanel11.setPreferredSize(new java.awt.Dimension(150, 50));
+        jPanel11.setPreferredSize(new java.awt.Dimension(135, 50));
 
         jLabel12.setText("Bánh");
 
@@ -471,7 +471,7 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addComponent(jLabel12)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -485,8 +485,9 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
 
         pnlCenter.add(pnlFoodCategory, java.awt.BorderLayout.LINE_START);
 
+        jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder("Danh sách món ăn"));
         jPanel14.setOpaque(false);
-        jPanel14.setPreferredSize(new java.awt.Dimension(625, 600));
+        jPanel14.setPreferredSize(new java.awt.Dimension(600, 600));
 
         jScrollPane2.setBackground(new java.awt.Color(153, 153, 0));
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -496,19 +497,20 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
         pnlFoodItem.setMaximumSize(new java.awt.Dimension(615, 10000));
         pnlFoodItem.setMinimumSize(new java.awt.Dimension(615, 1000));
         pnlFoodItem.setName(""); // NOI18N
-        pnlFoodItem.setPreferredSize(new java.awt.Dimension(615, 5000));
+        pnlFoodItem.setPreferredSize(new java.awt.Dimension(635, 5000));
         pnlFoodItem.setRequestFocusEnabled(false);
         pnlFoodItem.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         jPanel8.setBackground(new java.awt.Color(102, 51, 0));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel8.setToolTipText("");
+        jPanel8.setPreferredSize(new java.awt.Dimension(296, 77));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 294, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -520,12 +522,13 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
         jPanel12.setBackground(new java.awt.Color(102, 51, 0));
         jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel12.setToolTipText("");
+        jPanel12.setPreferredSize(new java.awt.Dimension(296, 77));
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 294, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -537,12 +540,13 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
         jPanel13.setBackground(new java.awt.Color(102, 0, 0));
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel13.setToolTipText("");
+        jPanel13.setPreferredSize(new java.awt.Dimension(296, 77));
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 294, Short.MAX_VALUE)
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -557,13 +561,11 @@ public class EditOrderPopupView extends javax.swing.JFrame implements PopupView 
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 615, Short.MAX_VALUE)
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
         );
 
         pnlCenter.add(jPanel14, java.awt.BorderLayout.CENTER);
